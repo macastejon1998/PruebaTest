@@ -16,7 +16,7 @@ CMD ["pytest", "test_ops.py"]
 # # # Nueva línea para ejecutar y redirigir la salida a un archivo en el escritorio
 # # CMD ["python", "ops.py", ">>", "/output.txt"]
 
-CMD ["sh", "-c", "pytest /app/host/test_ops.py && python ops.py > /output.txt"]
+# # CMD ["sh", "-c", "pytest /app/host/test_ops.py && python ops.py > /output.txt"]
 
 # docker run -v /Users/usuario/Desktop:/app/host pruebatest3 > salida.txt
 
