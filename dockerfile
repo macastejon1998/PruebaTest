@@ -11,11 +11,5 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # Ejecuta las pruebas con pytest
-CMD ["pytest", "test_ops.py"]
-
-# # # Nueva línea para ejecutar y redirigir la salida a un archivo en el escritorio
-# # CMD ["python", "ops.py", ">>", "/output.txt"]
-# # CMD ["sh", "-c", "pytest /app/host/test_ops.py && python ops.py > /output.txt"]
-# docker run -v /Users/usuario/Desktop:/app/host pruebatest3 > salida.txt
-# docker run -v /Users/usuario/Desktop:/app/host pruebatest3 > salida.txt
-# # CMD ["python", "ops.py", ">>", "/output.txt"]
+# CMD ["pytest", "test_ops.py"]
+CMD ["sh", "-c", "pytest test_ops.py && tail -f /dev/null"]
